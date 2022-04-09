@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bwa/pages/attribute/first_pricing_header.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FirstPricing extends StatefulWidget {
@@ -10,35 +11,6 @@ class _FirstPricingState extends State<FirstPricing> {
   int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
-    Widget header() {
-      return Padding(
-        padding: const EdgeInsets.only(
-          top: 70.0,
-          left: 30,
-          right: 30,
-        ),
-        child: Column(
-          children: [
-            Center(
-              child: Image.asset(
-                'assets/crown.png',
-                width: 100,
-              ),
-            ),
-            const SizedBox(height: 28),
-            Text(
-              'Which one you wish \nto Upgrade',
-              style: GoogleFonts.poppins(
-                color: Color(0xff191919),
-                fontSize: 22,
-                fontWeight: FontWeight.w600,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
-      );
-    }
 
     Widget option(
       int index,
@@ -129,23 +101,21 @@ class _FirstPricingState extends State<FirstPricing> {
 
     return Scaffold(
       backgroundColor: Color(0xffFFFFFF),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 50.0),
-          child: Column(
-            children: [
-              header(),
-              const SizedBox(height: 30),
-              option(0, 'assets/pig_icon.png', 'Money Security', 'support',
-                  '24/7'),
-              const SizedBox(height: 24),
-              option(1, 'assets/paper_illustration.png', 'Automation',
-                  'we provide', 'Invoice'),
-              const SizedBox(height: 24),
-              option(2, 'assets/dollar_icon.png', 'Balance Report', 'can up to',
-                  '10k'),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 50.0),
+        child: Column(
+          children: [
+            FirstPricingHeader(),
+            const SizedBox(height: 30),
+            option(0, 'assets/pig_icon.png', 'Money Security', 'support',
+                '24/7'),
+            const SizedBox(height: 24),
+            option(1, 'assets/paper_illustration.png', 'Automation',
+                'we provide', 'Invoice'),
+            const SizedBox(height: 24),
+            option(2, 'assets/dollar_icon.png', 'Balance Report', 'can up to',
+                '10k'),
+          ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

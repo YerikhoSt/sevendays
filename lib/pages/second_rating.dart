@@ -31,7 +31,6 @@ class SecondRatingScreen extends StatelessWidget {
             const SizedBox(height: 50,),
             Image.asset(
               'assets/stars.png',
-              width: 290,
               height: 50,
             ),
             const SizedBox(height: 26),
@@ -52,7 +51,7 @@ class SecondRatingScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             SizedBox(
-              width: 319,
+              width: MediaQuery.of(context).size.width,
               height: 55,
               child: TextButton(
                 style: TextButton.styleFrom(
