@@ -1,23 +1,17 @@
-// ignore_for_file: unused_import, use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class FirstSplash extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
     return Scaffold(
       backgroundColor: const Color(0xff13131E),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 230, left: 118, right: 118),
-        child: Column(
+      body: ListView(
+          padding: const EdgeInsets.only(top: 230.0, left: 118, right: 118),
           children: [
             Center(
               child: Image.asset(
-                'assets/swords.png',
+                'assets/sword_icon.png',
                 width: 140,
               ),
             ),
@@ -25,14 +19,13 @@ class FirstSplash extends StatelessWidget {
             Text(
               'VENTURE',
               style: GoogleFonts.dmSerifDisplay(
-                color: Color(0xffFFFFFF),
+                color: const Color(0xffFFFFFF),
                 fontSize: 32,
-
               ),
             )
           ],
         ),
-      ),
+    
     );
   }
 }

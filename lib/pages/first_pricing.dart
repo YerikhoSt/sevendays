@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FirstPricing extends StatefulWidget {
+  const FirstPricing({Key? key}) : super(key: key);
+
   @override
   _FirstPricingState createState() => _FirstPricingState();
 }
@@ -11,13 +13,12 @@ class _FirstPricingState extends State<FirstPricing> {
   @override
   Widget build(BuildContext context) {
     Widget header() {
-      return Padding(
-        padding: const EdgeInsets.only(
-          top: 70.0,
+      return ListView(
+          padding: const EdgeInsets.only(
+          top: 100.0,
           left: 30,
           right: 30,
         ),
-        child: Column(
           children: [
             Center(
               child: Image.asset(
@@ -25,19 +26,18 @@ class _FirstPricingState extends State<FirstPricing> {
                 width: 100,
               ),
             ),
-            const SizedBox(height: 28),
+            const SizedBox(height: 48),
             Text(
               'Which one you wish \nto Upgrade',
               style: GoogleFonts.poppins(
-                color: Color(0xff191919),
+                color: const Color(0xff191919),
                 fontSize: 22,
                 fontWeight: FontWeight.w600,
               ),
               textAlign: TextAlign.center,
             ),
           ],
-        ),
-      );
+        );
     }
 
     Widget option(
@@ -60,8 +60,8 @@ class _FirstPricingState extends State<FirstPricing> {
             borderRadius: BorderRadius.circular(60),
             border: Border.all(
               color: selectedIndex == index
-                  ? Color(0xff6050E7)
-                  : Color(0xffD9DEEA),
+                  ? const Color(0xff6050E7)
+                  : const Color(0xffD9DEEA),
             ),
           ),
           child: Padding(
@@ -84,7 +84,7 @@ class _FirstPricingState extends State<FirstPricing> {
                       Text(
                         title,
                         style: GoogleFonts.poppins(
-                          color: Color(0xff191919),
+                          color: const Color(0xff191919),
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
@@ -94,7 +94,7 @@ class _FirstPricingState extends State<FirstPricing> {
                           Text(
                             description,
                             style: GoogleFonts.poppins(
-                              color: Color(0xffA3A8B8),
+                              color: const Color(0xffA3A8B8),
                               fontWeight: FontWeight.w300,
                             ),
                           ),
@@ -102,7 +102,7 @@ class _FirstPricingState extends State<FirstPricing> {
                           Text(
                             subDescription,
                             style: GoogleFonts.poppins(
-                              color: Color(0xff5343C2),
+                              color: const Color(0xff5343C2),
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -128,14 +128,14 @@ class _FirstPricingState extends State<FirstPricing> {
     }
 
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+      backgroundColor: const Color(0xffFFFFFF),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(bottom: 50.0),
           child: Column(
             children: [
               header(),
-              const SizedBox(height: 30),
+              const SizedBox(height: 50),
               option(0, 'assets/pig_icon.png', 'Money Security', 'support',
                   '24/7'),
               const SizedBox(height: 24),
@@ -150,7 +150,7 @@ class _FirstPricingState extends State<FirstPricing> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xff6050E7),
+        backgroundColor: const Color(0xff6050E7),
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Padding(

@@ -1,125 +1,120 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// ignore: use_key_in_widget_constructors
 class SecondSignIn extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 44, left: 28, right: 28, bottom: 30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
+          padding: const EdgeInsets.only(
+          top: 64.0,
+          left: 28,
+          right: 28,
+        ),
           children: [
             Center(
               child: Image.asset(
-                'assets/paper_icon.png',
-                width: 225,
-                height: 259,
-                ),
+                'assets/paper_illustration.png',
+                width: 245,
+                height: 279,
+              ),
             ),
-            const SizedBox(height: 40,),
+            const SizedBox(height: 53),
             Text(
               'Email Address',
               style: GoogleFonts.openSans(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: Color(0xff000000),
+                color: const Color(0xff17171A),
               ),
-              ),
-            const SizedBox(height: 10,),
+            ),
+            const SizedBox(height: 6),
             TextFormField(
               style: GoogleFonts.openSans(
-                color: Colors.black,
+                color: const Color(0xff17171A),
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
               ),
               decoration: InputDecoration(
-                fillColor: Color(0xffF3F3F3),
+                fillColor: const Color(0xffF3F3F3),
                 filled: true,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(71),
                   borderSide: BorderSide.none,
                 ),
                 hintText: 'Email',
-                hintStyle: GoogleFonts.openSans(
-                  color: Color(0xff6F7075),
-                )
               ),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(height: 20),
             Text(
               'Password',
               style: GoogleFonts.openSans(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: Color(0xff000000),
+                color: const Color(0xff17171A),
               ),
-              ),
-            const SizedBox(height: 10,),
+            ),
+            const SizedBox(height: 6),
             TextFormField(
               obscureText: true,
               style: GoogleFonts.openSans(
-                color: Colors.black,
+                color: const Color(0xff17171A),
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
               ),
               decoration: InputDecoration(
-                fillColor: Color(0xffF3F3F3),
+                fillColor: const Color(0xffF3F3F3),
                 filled: true,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(71),
                   borderSide: BorderSide.none,
                 ),
                 hintText: 'Password',
-                hintStyle: GoogleFonts.openSans(
-                  color: Color(0xff6F7075),
-                )
               ),
             ),
-            const SizedBox(height: 30,),
-            Container(
-              width: 320,
-              height: 55,
-              decoration: BoxDecoration(
-                color: Color(0xff5468FF),
-                borderRadius: BorderRadius.circular(60),
-              ),
-              child: Center(
-                child: Text(
-                  'Log In',
-                  style: GoogleFonts.openSans(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
+            const SizedBox(height: 50),
+            Center(
+              child: Container(
+                width: 330,
+                height: 55,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: const Color(0xff5468FF),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(60),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    'Log In',
+                    style: GoogleFonts.openSans(
+                      color: const Color(0xffF8F8F8),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 10,),
-            Container(
-              width: 320,
-              height: 55,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 2.0, 
-                  color: Color(0xffCFCFCF),
-                  ),
-                borderRadius: BorderRadius.circular(60),
-              ),
-              child: Center(
-                child: Text(
-                  'Create New Account',
-                  style: GoogleFonts.openSans(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xffCFCFCF),
+            const SizedBox(height: 16),
+            Center(
+              child: Container(
+                width: 330,
+                height: 55,
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(60),
+                  )),
+                  onPressed: () {},
+                  child: Text(
+                    'Create New Account',
+                    style: GoogleFonts.openSans(
+                      color: const Color(0xffCFCFCF),
+                      fontSize: 18,
+                    ),
                   ),
                 ),
               ),
             )
           ],
         ),
-      ),
     );
   }
 }

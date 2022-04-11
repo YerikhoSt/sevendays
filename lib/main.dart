@@ -1,9 +1,8 @@
-// ignore_for_file: use_key_in_widget_constructors, unused_import
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bwa/pages/contoh.dart';
 import 'package:flutter_bwa/pages/first_empty.dart';
 import 'package:flutter_bwa/pages/first_pricing.dart';
+import 'package:flutter_bwa/pages/first_random.dart';
 import 'package:flutter_bwa/pages/first_rating.dart';
 import 'package:flutter_bwa/pages/first_signin.dart';
 import 'package:flutter_bwa/pages/first_splash.dart';
@@ -22,7 +21,7 @@ class SevenDays extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPricing(),
+      home: FirstSignIn(),
     );
   }
 }

@@ -1,45 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bwa/widgets/theme.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class SecondRatingScreen extends StatelessWidget {
-
+class SecondRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 80, right: 28, left: 28),
-        child: Column(
+      backgroundColor: const Color(0xffFFFFFF),
+      body: ListView(
+          padding: const EdgeInsets.only(top: 100.0, left: 28, right: 28),
           children: [
             Center(
               child: Image.asset(
-                'assets/home_official.png',
-                width: 294,
+                'assets/office_illustration.png',
+                width: 295,
                 height: 210,
               ),
             ),
-            const SizedBox(height: 40,),
+            const SizedBox(height: 50),
             Text(
               'Enjoy Your Meal',
               style: firstTextStyle,
             ),
+            const SizedBox(height: 6),
             Text(
               'Please rate our experience',
               style: subTextStyle,
             ),
-            const SizedBox(height: 50,),
+            const SizedBox(height: 50),
             Image.asset(
               'assets/stars.png',
               width: 290,
               height: 50,
             ),
-            const SizedBox(height: 26),
+            const SizedBox(height: 36),
             Container(
               width: 319,
               height: 130,
               decoration: BoxDecoration(
-                color: Color(0xffF8F8F8),
+                color: const Color(0xffF8F8F8),
                 borderRadius: BorderRadius.circular(17),
               ),
               child: Padding(
@@ -50,13 +48,13 @@ class SecondRatingScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-            SizedBox(
+            const SizedBox(height: 30),
+            Container(
               width: 319,
               height: 55,
               child: TextButton(
                 style: TextButton.styleFrom(
-                    backgroundColor: Color(0xff4074E6),
+                    backgroundColor: const Color(0xff4074E6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(13),
                     )),
@@ -69,7 +67,7 @@ class SecondRatingScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
+    
     );
   }
 }
