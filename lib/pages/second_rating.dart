@@ -29,7 +29,6 @@ class SecondRating extends StatelessWidget {
             const SizedBox(height: 50),
             Image.asset(
               'assets/stars.png',
-              width: 290,
               height: 50,
             ),
             const SizedBox(height: 36),
@@ -48,9 +47,15 @@ class SecondRating extends StatelessWidget {
                 ),
               ),
             ),
+<<<<<<< HEAD
             const SizedBox(height: 30),
             Container(
               width: 319,
+=======
+            const SizedBox(height: 20),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+>>>>>>> d639001db058767ebbb113343cb50c4509999f38
               height: 55,
               child: TextButton(
                 style: TextButton.styleFrom(

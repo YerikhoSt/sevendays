@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bwa/pages/attribute/first_pricing_header.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FirstPricing extends StatefulWidget {
@@ -12,6 +13,7 @@ class _FirstPricingState extends State<FirstPricing> {
   int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     Widget header() {
       return ListView(
           padding: const EdgeInsets.only(
@@ -39,6 +41,8 @@ class _FirstPricingState extends State<FirstPricing> {
           ],
         );
     }
+=======
+>>>>>>> d639001db058767ebbb113343cb50c4509999f38
 
     Widget option(
       int index,
@@ -128,6 +132,7 @@ class _FirstPricingState extends State<FirstPricing> {
     }
 
     return Scaffold(
+<<<<<<< HEAD
       backgroundColor: const Color(0xffFFFFFF),
       body: SingleChildScrollView(
         child: Padding(
@@ -146,6 +151,24 @@ class _FirstPricingState extends State<FirstPricing> {
                   '10k'),
             ],
           ),
+=======
+      backgroundColor: Color(0xffFFFFFF),
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 50.0),
+        child: Column(
+          children: [
+            FirstPricingHeader(),
+            const SizedBox(height: 30),
+            option(0, 'assets/pig_icon.png', 'Money Security', 'support',
+                '24/7'),
+            const SizedBox(height: 24),
+            option(1, 'assets/paper_illustration.png', 'Automation',
+                'we provide', 'Invoice'),
+            const SizedBox(height: 24),
+            option(2, 'assets/dollar_icon.png', 'Balance Report', 'can up to',
+                '10k'),
+          ],
+>>>>>>> d639001db058767ebbb113343cb50c4509999f38
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

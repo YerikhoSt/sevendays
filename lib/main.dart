@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> d639001db058767ebbb113343cb50c4509999f38
 import 'package:flutter/material.dart';
 import 'package:flutter_bwa/pages/first_empty.dart';
 import 'package:flutter_bwa/pages/first_pricing.dart';
